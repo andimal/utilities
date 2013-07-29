@@ -1,0 +1,31 @@
+@import "compass/reset";
+@import "compass/css3";
+// @import "bootstrap-responsive";
+
+$base : 16;
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+	font-family: Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+@mixin transition($property: all, $duration: 0.2s) {
+  -webkit-transition: $property $duration;
+		 -moz-transition: $property $duration;
+			-ms-transition: $property $duration;
+		   -o-transition: $property $duration;
+					transition: $property $duration;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
