@@ -2,7 +2,12 @@
 @import "compass/css3";
 // @import "bootstrap-responsive";
 
-$base : 16;
+$baseFontSize	: 16;
+
+// Convert pixels to ems. Usage: (16)pem = 1em
+@function pem($pxval, $base: $baseFontSize) {
+  @return #{$pxval / $base}em;
+}
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
@@ -14,7 +19,6 @@ $base : 16;
 
 body {
 	font-family: Helvetica, sans-serif;
-	font-size: 16px;
 }
 
 @mixin transition($property: all, $duration: 0.2s) {
@@ -23,6 +27,13 @@ body {
 			-ms-transition: $property $duration;
 		   -o-transition: $property $duration;
 					transition: $property $duration;
+}
+
+@mixin placeholder() {
+	::-webkit-input-placeholder { @content; }
+	:-moz-placeholder { @content; }
+	::-moz-placeholder { @content; }
+	:-ms-input-placeholder {   @content; }
 }
 
 a {
