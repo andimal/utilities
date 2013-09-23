@@ -9,6 +9,10 @@ $baseFontSize	: 16;
   @return #{$pxval / $base}em;
 }
 
+@function rem($pxval, $base: $baseFontSize) {
+  @return #{$pxval / $base}rem;
+}
+
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .group:after {
