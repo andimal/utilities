@@ -21,6 +21,12 @@ $baseFontSize	: 16;
   clear: both;
 }
 
+@mixin group() {
+	  content: "";
+	  display: table;
+	  clear: both;
+}
+
 body {
 	font-family: Helvetica, sans-serif;
 }
