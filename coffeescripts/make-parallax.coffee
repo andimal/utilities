@@ -2,8 +2,6 @@
 	$.fn.makeParallax = (options) ->
 		$_this = $(this)
 
-		console.log 'test'
-
 		settings = $.extend(
 			offset : 0
 			distance : 0
