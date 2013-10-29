@@ -22,9 +22,11 @@ $baseFontSize	: 16;
 }
 
 @mixin group() {
-	  content: "";
-	  display: table;
-	  clear: both;
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 }
 
 body {
